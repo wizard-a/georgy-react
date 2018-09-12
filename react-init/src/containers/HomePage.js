@@ -14,6 +14,13 @@ class App extends Component {
         };
     }
 
+
+    switchLocale = () => {
+        const {currLocale, changeLocale} = this.props;
+        const lc = currLocale === 'en' ? 'zh' : 'en';
+        changeLocale(lc);
+    }
+
     render () {
         const {name, unreadCount} = this.state;
         const {intl} = this.props;
@@ -21,6 +28,11 @@ class App extends Component {
         return (
             <div>
                 <h2>React-intl Demo</h2>
+                <div>
+                    <button onClick={this.switchLocale}>
+                        切换语言
+                    </button>
+                </div>
                 <p>
                     <FormattedMessage 
                         id="intl.hello"
@@ -39,11 +51,11 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    HomeMessage: state.home
+    currLocale: state.home.currLocale
 });
 
 const mapActionCreators = {
-    changeMessage: () => Actions.changeMessage("hello"),
+    ...Actions,
 }
 
 export default connect(mapStateToProps, mapActionCreators)(injectIntl(App));

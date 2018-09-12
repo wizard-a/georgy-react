@@ -1,10 +1,15 @@
 import * as types from '../actions/types.js';
-const initialState = "Hello react starter kit";
+const initialState = {
+    currLocale: 'zh'
+};
 
 function Home(state = initialState, action) {
     switch (action.type) {
-        case types.HOME_MESSAGE:
-            return action.data;
+        case types.SWITCH_LOCALEN:
+            return {
+                ...state,
+                currLocale: action.data,
+            };
         default:
             return state;
     }

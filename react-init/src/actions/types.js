@@ -1,1 +1,1 @@
-export const HOME_MESSAGE = "HOME_MESSAGE";
+export const SWITCH_LOCALEN = "HOME_MESSAGE";

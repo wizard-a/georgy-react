@@ -1,8 +1,8 @@
-import {HOME_MESSAGE} from './types.js';
+import {SWITCH_LOCALEN} from './types.js';
 
-export function changeMessage (message) {
+export function changeLocale (currLocale) {
     return {
-        type: HOME_MESSAGE,
-        data: message
+        type: SWITCH_LOCALEN,
+        data: currLocale
     };
 }
