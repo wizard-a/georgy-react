@@ -1,0 +1,7 @@
+{
+    "favorites.resources": [
+        "webpack/webpack-loader/node_modules/webpack",
+        "webpack/webpack-loader/node_modules/webpack-cli",
+        "webpack/webpack-loader/node_modules/vscode-webpack-debugger"
+    ]
+}
